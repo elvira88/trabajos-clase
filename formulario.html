@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+            <meta charset="utf-8"/>
+            <title>Formulario </title>
+        <style>
+            ::placeholder {
+                    color:firebrick;
+            
+            }
+            .emailcolor ::placeholder {
+                    color:turquoise
+            
+            }
+            .terms {
+                    color:#94ad1a
+            
+            }
+            .boton {
+                    background-color:#94ad1a;
+                    color:aliceblue
+            }
+            .divgigante {
+                    background-color:dimgray;
+                    text-align: center;
+                    margin: 25%
+            }
+            
+            .boton1 {
+                    text-align: right
+            }
+        </style>
+    </head>
+    <body>
+        <div class="divgigante">
+            <div> <h1>Create an Account</h1>
+            </div>
+            <hr/>
+            <div>
+                <form name="formulario" class="formulario" id="formulario" action="formulario.php" method="post">
+                        <div>
+                            <input type="text" placeholder="Nombre" name="nombre" id="nombre" value="" required autocomplete="off"/>
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Phone number" name="telefono" id="telefono" value="" required pattern="\d{2,9}" autocomplete="off"/>
+                        </div>
+                        <div class="emailcolor">
+                            <input type="email" placeholder="Email" name="email" id="email" value="" required autocomplete="off"/>
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Password" name="password" id="password" value="" required autocomplete="off"/>
+                        </div>
+                        <div>
+                            <input type="checkbox" required name="condiciones" id="condiciones"/>
+                            <label for="acepta">I agree to the <a href="#" class="terms">Terms and Conditions</a> and <a href="#" class="terms">Privacy Policy</a></label>
+                        </div>
+                        <div class="boton1">
+                            <input type="submit" class="boton" name="submit" id="submit" value="Create Account"/>
+                        </div>
+                </form>
+            </div>
+        </div> 
+    </body>
+</html>

@@ -1,0 +1,14 @@
+body {
+    background-color: #595547;
+    color: white;
+    font-family: 'Roboto condensed', sans-serif;
+}
+h1, h2{
+    color: #9FC2F8;
+}
+.amarillo{
+    color: yellow;
+}
+a{
+    color:#FF4F4F;
+}

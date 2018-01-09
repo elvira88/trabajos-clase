@@ -1,0 +1,20 @@
+body {
+    background-color:beige;
+    width: 90%;
+    margin: 0 auto;
+    }
+.tituloh3{    /*cambiar display por float*/
+    display: inline-block;
+    }
+.navegacion{    /*cambiar display por float*/
+    display: inline-block;
+    list-style-type: none;
+    }
+.banner{        /*no existe class banner*/
+    background-image: url("img/puente%20san%20francisco.jpg");
+    height: 250px;
+    border-radius: 25px;
+    }
+.barranegra{
+    
+    }

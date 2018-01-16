@@ -9,4 +9,4 @@ function init(){
     $("ul li:nth-child(5)").css("background-color","yellow");
     $("input").css("background-color","lightblue");
 }
-$("document").ready(init);
+$("document").ready(init);//las comillas son opcionales

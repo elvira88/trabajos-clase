@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Drag and Drop</title>
+    <style>
+        #contenedor{
+            overflow: hidden;
+        }
+        .div{
+            height: 300px;
+            width: 300px;
+            background-color: darkred;
+            display:inline-block;
+            color: beige;
+            float: left;
+            margin: 10px;
+        }
+    </style>
+    <script src="drag.js"></script>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="div1" class="div" draggable="true">Caja 1</div>
+        <div id="div2" class="div">Caja 2</div>
+        <div id="div3" class="div">Caja 3</div>
+    </div>
+</body>
+</html>

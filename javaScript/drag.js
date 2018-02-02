@@ -14,29 +14,30 @@
 function empezando(event){
     console.log("Empezando");
     event.dataTransfer.setData("iden",event.target.id);
-};
+}
 
 function entrar(){
     console.log("Arrastrando");
-};
+}
 
 function salir(){
     console.log("Saliendo"); 
-};
+}
 
 function pasear(event){
     console.log ("Entra en el div3");
-    event.preventDefault()
-};
+    event.preventDefault();
+}
 
 function soltar(event){
     console.log("Div soltado");
     event.preventDefault();
     var data = event.dataTransfer.getData("iden");
+    console.log(data);
     var midiv = document.getElementById("div3");
     console.log(midiv);
     midiv.innerHTML+="<p>Identificativo:"+data+"</p>";
-};
+}
 
 function init(){
     console.log ("DOM cargado")

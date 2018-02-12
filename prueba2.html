@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Examen</title>
+    <script src="jQuery/jquery-3.2.1.js"></script>
+</head>
+<body>
+   <form action="#">
+       <label for="busqueda">Busca aquí</label>
+       <input type="search" id="busqueda" list="sugerencias">
+       <datalist id="sugerencias">
+           <option value="El señor de los anillos"></option>
+           <option value="Millenium"></option>
+           <option value="Réquiem por un sueño"></option>
+           <option value="Cantar del Mío Cid"></option>
+       </datalist>
+       <input type="submit" id="buscar" value="Enviar">
+   </form>
+       <button id="ajax">Ejecuta Ajax</button>
+       <button id="resultados">Muestra los resultados</button>
+    <script>
+        var texto_a_buscar;
+        function tecleaTexto(){
+            texto_a_buscar = $("#busqueda").val();     
+        };
+        $("#busqueda").keyup(tecleaTexto);
+        
+       var lista_articulos; 
+        $("#ajax").on("click",cogeAjax);
+        function cogeAjax(){
+            $.get("http://www.mocky.io/v2/5a54ae822d00005f235b1cd2", function(datos){
+                lista_articulos = datos;
+                console.log(datos);
+            })
+        };
+        
+ $("#buscar").on("click",filtradoArticulos);
+    
+    function filtradoArticulos(){
+        
+        for(var i in lista_articulos){
+            if (texto_a_buscar == lista_articulos[i].titulo) {
+                console.log("Se ha encontrado una coincidencia en el título");
+            }else if (texto_a_buscar == lista_articulos[i].autor){
+                console.log("Se ha encontrado una coincidencia en el autor");
+            }
+        }
+    };
+    
+        var i=i;
+        $("#resultados").click(resultadoFiltrado);
+        function resultadoFiltrado(){
+            $("#sugerencias").append("<option><li>"+lista_articulos[i]+"</li></option>")
+        };
+        
+        $("#busqueda").keypress(temporizador);
+        function temporizador(){
+            setTimeout(tecleaTexto,800);
+        };
+        
+    </script>
+</body>
+</html>

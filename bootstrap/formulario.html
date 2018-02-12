@@ -1,0 +1,169 @@
+<!--1. Coge el resultado del ejercicio 2 y maqueta el formulario de la barra superior. Para que tenga un aspecto de formulario inline bootstrap pero que el icono de búsqueda vaya dentro del campo. Dentro del campo deberá aparecer cuando no esté rellenado el texto "Buscar".
+2. Dentro del div de contenido introduce el típico formulario de login. Maquétalo con Bootstrap.
+3. Crea una nueva página que sea copia de la anterior y llámala registro. Quita el contenido completo central de la página y pon el típico formulario de registro: nombre e usuario, contraseña dos veces, email, nombre apellidos, etc... y el botón de enviar el formulario. 
+4. Integra un plugin de Jquery de validación de formularios sobre estos dos últimos formularios. Mira a ver si puedes hacer que el plugin de validación use por defecto las clases de error y validación de bootstrap.-->
+<!DOCTYPE>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="../bootstrap-4.0/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../ejemplos-bootstrap.v4/ejercicios/grid.css" title="style">
+    <link rel="stylesheet" href="../bootstrap-4.0/font-awesome/css/font-awesome.min.css">
+    <script src="../bootstrap-4.0/js/jquery-3.3.1.slim.js"></script>
+    <script src="../bootstrap-4.0/js/bootstrap.bundle.js"></script>
+    <title>Lorem ipsum</title>
+</head>
+
+<body>
+    <!-- Contenedor -->
+    <div class="container">
+
+        <!-- Cabecera -->
+        <div class="cabecera row">
+            <div class="logo col-xl-3 col-lg-3">
+                <h1><span>LOGOTIPO</span></h1>
+            </div>
+
+            <div class="buscador col-xl-3 offset-xl-6  col-lg-3 offset-lg-6">
+                <form action="#" method="post">
+                  <div class="input-group">
+                       <input name="busqueda" type="text" placeholder="Buscar"/>
+                       <div class="input-group-btn">
+                           <button type="submit" class="btn btn-success"><i class="fa fa-search" aria-hidden="true"></i></button>
+                       </div>
+                   </div>
+                </form>
+            </div>
+
+
+        </div>
+        <!-- /Cabecera -->
+
+        <!-- Menu principal -->
+        <div class="menu row">
+            <ul class="menu_principal nav">
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Ipsum</a></li>
+                <li><a href="#">Dolor</a></li>
+                <li><a href="#">Sit</a></li>
+                <li><a href="#">Amet</a></li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <!-- Lateral -->
+            <div class="lateral col-xl-3 col-lg-3 row">
+
+                <!-- Noticias -->
+                <div class="noticias col-xl-12">
+                    <h3><a href="#">Noticias</a></h3>
+                    <p><span class="fecha">dd/mm/aaaa</span> <a href="#">Lorem ipsum dolor sit amet</a></p>
+                    <p><span class="fecha">dd/mm/aaaa</span> <a href="#">Consectetuer adipiscing elit</a></p>
+                    <p><span class="fecha">dd/mm/aaaa</span> <a href="#">Donec molestie nunc eu sapien</a></p>
+                    <p><span class="fecha">dd/mm/aaaa</span> <a href="#">Maecenas aliquam dolor eget metus</a></p>
+                    <p><span class="fecha">dd/mm/aaaa</span> <a href="#">Fusce tristique lorem id metus</a></p>
+
+                    <h3><a href="#">Enlaces relacionados</a></h3>
+                    <ul>
+                        <li><a href="#">Proin placerat</a></li>
+                        <li><a href="#">Nulla in felis</a></li>
+                        <li><a href="#">Nam luctus</a></li>
+                    </ul>
+                </div>
+                <!-- /Noticias -->
+
+                <!-- Publicidad -->
+                <div class="col-xl-12">
+                    <h3><a href="#">Publicidad</a></h3>
+                    <p>Etiam fermentum, nisl tincidunt blandit interdum, massa velit posuere dolor, sed euismod sem odio at mi.</p>
+                    <p>Duis porta placerat arcu. Nullam felis pede, commodo vel, suscipit a, molestie vel, felis. Maecenas mattis est vel est.</p>
+                    <p><a href="#">Seguir leyendo...</a></p>
+                </div>
+                <!-- /Publicidad -->
+
+            </div>
+            <!-- /Lateral -->
+            <!-- /Contenido -->
+            <div class="contenido col-xl-9 col-lg-9 row">
+
+                <!-- Principal -->
+                <div class="principal col-xl-9">
+
+                    <div class="articulo">
+                        <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+
+                        <img src="imagenes/imagen.png" alt="Imagen genérica" />
+
+                        <p>Nullam est lacus, suscipit ut, dapibus quis, condimentum ac, risus. Vivamus vestibulum, ipsum sollicitudin faucibus pharetra, dolor metus fringilla dui, vel aliquet pede diam tempor tortor.</p>
+                        <p>Vestibulum pulvinar urna et quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam vel turpis vitae dui imperdiet laoreet. Quisque eget ipsum.</p>
+                        <p>Donec commodo, turpis vel venenatis sollicitudin, quam ante convallis justo, sed eleifend justo lectus quis sapien. Ut consequat libero eget est.</p>
+                        <p><a href="#">Seguir leyendo...</a></p>
+                    </div>
+                    
+                    <div class="form-group col-md-6">
+                        <form action="#">
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" class="form-control">
+                            </div>
+                            <div>
+                                <label for="password">Contraseña:</label>
+                                <input type="password" id="password" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="articulo">
+                        <h2>Vivamus lobortis turpis ac ante fringilla faucibus</h2>
+
+                        <img src="imagenes/imagen.png" alt="Imagen genérica" />
+
+                        <p>Quisque eget ipsum. Donec commodo, turpis vel venenatis sollicitudin, quam ante convallis justo, sed eleifend justo lectus quis sapien. Ut consequat libero eget est.</p>
+                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam dictum hendrerit neque. Mauris id ligula non elit mattis semper. Fusce arcu ipsum, tempus eget, tincidunt at, imperdiet in, mi.</p>
+                        <p>Sed fermentum cursus dolor. Aenean a diam. Phasellus feugiat. Donec tempor dignissim sem.</p>
+                        <p><a href="#">Seguir leyendo...</a></p>
+                    </div>
+
+                </div>
+                <!-- /Principal -->
+
+                <!-- Secundario -->
+                <div class="secundario col-xl-3">
+                    <h2>Phasellus blandit</h2>
+                    <p>Praesent sodales imperdiet augue. Mauris lorem felis, semper eu, tincidunt eu, sollicitudin eget, sem. Nulla facilisi. Morbi ut enim ut enim ultricies dapibus.</p>
+                    <p><a href="#">Seguir leyendo...</a></p>
+
+                    <h2>Nullam vel turpis</h2>
+                    <p>Donec commodo, turpis vel venenatis sollicitudin, quam ante convallis justo, sed eleifend justo lectus quis sapien. Ut consequat libero eget est.</p>
+                    <p><a href="#">Seguir leyendo...</a></p>
+                </div>
+                <!-- /Secundario -->
+
+            </div>
+            <!-- /Contenido -->
+        </div>
+
+        <!-- Pie -->
+        <div class="pie row">
+            <span class="enlaces col-xl-5">
+			<a href="#">Nulla</a> |
+			<a href="#">Pharetra</a> |
+			<a href="#">Luctus</a> |
+			<a href="#">Ipsum</a> |
+			<a href="#">Proin</a> |
+			<a href="#">Placerat</a>
+		</span>
+
+            <span class="copyright col-xl-3 offset-xl-4 text-right">
+			&copy; Copyright Lorem ipsum
+		</span>
+            
+        </div>
+        <!-- /Pie -->
+
+    </div>
+    <!-- /Contenedor -->
+
+</body>
+
+</html>

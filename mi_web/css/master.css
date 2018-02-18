@@ -1,7 +1,20 @@
 header{
     justify-content: center;
 }
-#saludo{
+nav a{
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+#titulo{
     font-family: 'Acme', sans-serif;
     text-align: center;
+    font-size: 2rem;
+}
+p{
+    text-align: center;
+}
+footer{
+    background-color: chartreuse;
+    color: chocolate;
 }

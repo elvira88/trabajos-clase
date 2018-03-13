@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1 Formulario de login
+    form(id="login",action="./api/login/",method="post")
+        div
+            label(for="usuario")
+            input(type="text",id="usuario",placeholder="usuario",value="")
+        div
+            label(for="password")
+            input(type="password",id="password",placeholder="contraseña",value="")
+        div
+            input(type="submit")
+        div(id="muestraLogin")
+        

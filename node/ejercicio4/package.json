@@ -1,0 +1,15 @@
+{
+  "name": "ejercicio4",
+  "version": "1.0.0",
+  "description": "ejercicio4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elvira Alvarez",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2"
+  }
+}
